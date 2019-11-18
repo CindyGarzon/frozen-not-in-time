@@ -1,0 +1,155 @@
+html {
+  font-family: 'Fredoka One', cursive;
+}
+
+.banner-wrapper {
+  background: #b3fbff;
+  background-image: repeating-linear-gradient(-35deg, #c9fcff, #c9fcff 10px, #d4fdff 10px, #d4fdff 20px);
+  position: relative;
+  text-align: center;
+  max-height: 75vh;
+}
+
+.left-content {
+  animation:
+  opacity .5s 1s linear forwards,
+  blur .5s 2.5s linear forwards;
+  padding-left: 2em;
+  opacity: 0;
+}
+
+@@keyframes opacity {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blur {
+  0% {
+    filter: blur(14px);
+  }
+  100% {
+    filter: blur(0);
+  }
+
+}
+
+.banner-content h1 {
+  color: #990073;
+  transform: rotate(-7deg);
+  text-shadow: 1px 2px 1px rgba(0,0,0,.2)
+}
+
+banner-content h2 {
+  color: #c09;
+  transform: rotate(-5deg);
+  text-shadow: 1px 2px 1px rbga(0,0,0,.2)
+  max-width: 19em;
+}
+
+p {
+  text-shadow: 1px 2px 1px rgba(0,0,0,.2)
+}
+
+.btn-ghost {
+  color: #c09;
+  border-radius: 5px;
+  color: #990073;
+}
+
+.btn-ghost:hover {
+  background-color: rgba(204, 0, 153, .5);
+  border-color: #990073;
+  color: #c09;
+}
+
+.ice-cream {
+  padding-right: 11em;
+}
+
+.cone {
+  position: absolute;
+  bottom: 100%;
+  width: 180px;
+  animation: drop-cone 300ms linear forwards;
+}
+
+@@keyframes drop-cone {
+  0% {
+    bottom: 100%;
+  }
+  100% {
+    bottom: 2%
+  }
+
+}
+
+.chocolate {
+  width: 180px;
+  position: absolute;
+  bottom: 100%;
+  z-index 3;
+  animation: drop-chocolate 300ms 600ms linear forwards;
+}
+
+@@keyframes drop-chocolate {
+  0% {
+    bottom 100%;
+  }
+
+  100% {
+    bottom: 39%;
+  }
+
+}
+
+.vanilla {
+  position: absolute;
+  width: 180px;
+  bottom: 100%;
+  z-index: 4;
+  animation: drop-vanilla 300ms 900ms linear forwards;
+}
+
+@@keyframes drop-vanilla {
+  0% {
+    bottom: 100%;
+  }
+  100% {
+    bottom:55%;
+  }
+
+}
+
+.cherry {
+  display: inline-block;
+  width: 180px;
+  position: absolute;
+  bottom: 100%;
+  z-index: 5;
+  animation: drop-cherry 300ms 1200ms linear forwards;
+}
+
+@keyframes drop-cherry {
+  0% {
+    bottom: 100%;
+  }
+  100 {
+    bottom: 70%;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+  .left-content {
+    padding-left: 10.5em;
+    padding-top: 1em;
+  }
+
+  .ice-cream {
+    padding-right: 21em;
+  }
+}
