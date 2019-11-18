@@ -113,7 +113,7 @@ p {
 
 }
 
-.chocolate {
+.chocolate- {
   width: 180px;
   position: absolute;
   bottom: 100%;
@@ -121,7 +121,7 @@ p {
   animation: drop-choco 300ms 600ms linear forwards;
 }
 
-@keyframes drop-chocolate {
+@keyframes drop-chocolate-chip {
 
   0% {
     bottom: 100%;
@@ -133,7 +133,7 @@ p {
 
 }
 
-.vanilla {
+.vanilla-fudge {
   position: absolute;
   width: 180px;
   bottom: 100%;
@@ -141,7 +141,7 @@ p {
   animation: drop-vani 300ms 900ms linear forwards;
 }
 
-@keyframes drop-vanilla {
+@keyframes drop-vanilla-fudge {
 
   0% {
     bottom: 100%;
