@@ -1,188 +1,184 @@
 html {
   font-family: "Fredoka One", sans-serif;
-}
-
-.banner-wrapper {
-  background-color: #b3fbff;
-  background-image: repeating-linear-gradient(-35deg, #c9fcff, #c9fcff 10px, #d4fdff 10px, #d4fdff 20px);
-  position: relative;
-  text-align: center;
-  max-height: 75vh;
-}
-
-.left-content {
-  animation:
-    opacity .5s 1s linear forwards,
-    blur .5s 2.5s linear forwards;
-  padding-left: 2em;
-  opacity: 0;
-}
-
-@keyframes opacity {
-
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-
-}
-
-@keyframes blur {
-
-  0% {
-    filter: blur(14px);
-  }
-
-  100% {
-    filter: blur(0);
-  }
-
-}
-
-.banner-content h1 {
-  color: #990073;
-  transform: rotate(-7deg);
-  text-shadow: 1px 2px 1px rgba(0, 0, 0, .2);
-}
-
-.banner-content h2 {
   color: #c09;
-  transform: rotate(-5deg);
-  text-shadow: 1px 2px 1px rgba(0, 0, 0, .2);
-  max-width: 19em;
+  background-image: repeating-linear-gradient(to top left, #c9fcff, #c9fcff 10px, #d4fdff 10px, #d4fdff 20px);
+  border-bottom: 10px solid #b3fbff;
+  border-top: 10px solid #b3fbff;
 }
 
-p {
-  text-shadow: 1px 2px 1px rgba(0, 0, 0, .2);
+section {
+  max-height: 450px;
+}
+
+img {
+  width: 180px;
 }
 
 .btn-ghost {
   color: #c09;
-  border-radius: 5px;
   border-color: #990073;
 }
 
 .btn-ghost:hover {
-  background-color: rgba(204, 0, 153, .5);
-  border-color: #990073;
-  color: #c09;
+  background-color: #c09;
 }
 
-.ice-cream {
-  padding-right: 10em;
-}
-
-.cone {
-  position: absolute;
-  bottom: 100%;
-  width: 180px;
-  animation: drop-cone 300ms linear forwards;
-}
-
-@keyframes drop-cone {
-
-  0% {
-    bottom: 100%;
-  }
-
-  100% {
-    bottom: 2%;
-  }
-
-}
-
-.mint {
-  position: absolute;
-  bottom: 100%;
-  width: 180px;
-  animation: drop-mint 300ms 300ms linear forwards;
-}
-
-@keyframes drop-mint{
-
-  0% {
-    bottom: 100%;
-  }
-
-  100% {
-    bottom: 22%;
-  }
-
-}
-
-.chocolate {
-  width: 180px;
-  position: absolute;
-  bottom: 100%;
-  z-index: 3;
-  animation: drop-choco 300ms 600ms linear forwards;
-}
-
-@keyframes drop-chocolate {
-
-  0% {
-    bottom: 100%;
-  }
-
-  100% {
-    bottom: 39%;
-  }
-
-}
-
-.vanilla {
-  position: absolute;
-  width: 180px;
-  bottom: 100%;
-  z-index: 4;
-  animation: drop-vani 300ms 900ms linear forwards;
-}
-
-@keyframes drop-vanilla {
-
-  0% {
-    bottom: 100%;
-  }
-
-  100% {
-    bottom: 55%;
-  }
-
+.max-width {
+  max-width: 19em;
 }
 
 .cherry {
-  display: inline-block;
-  width: 180px;
-  position: absolute;
-  bottom: 100%;
-  z-index: 5;
-  animation: drop-cherry 300ms 1200ms linear forwards;
+  z-index: 10;
+  top: -15em;
+  left: 3.5em;
+  animation: fly-in-cherry .25s linear forwards;
 }
 
-@keyframes drop-cherry {
+.v-fudge {
+  z-index: 9;
+  top: -20.3em;
+  left: 3.33em;
+  animation: fly-in-v-fudge .25s .15s linear forwards;
+}
+
+.ch-chip {
+  z-index: 8;
+  top: -30.75em;
+  left: 3.75em;
+  animation: fly-in-ch-chip .25s .25s linear forwards;
+}
+
+.mt-chip {
+  top: -42em;
+  left: 3.5em;
+  animation: fly-in-mt-chip .25s .375s linear forwards;
+}
+
+.cone {
+  z-index: 7;
+  top: -50em;
+  left: 3.5em;
+  animation: fly-in-cone .25s .4s linear forwards;
+}
+
+.wrapper {
+  max-width: 56.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, p {
+  transform-origin: center;
+}
+
+h1, p, a {
+  filter: opacity(0);
+  text-shadow: 2px 3px rgba(0, 0, 0, .1);
+  animation: show .25s .5s linear forwards;
+}
+
+h1 {
+  transform: rotate(-10deg);
+  top: 60px;
+  left: 40px;
+  color: #990073;
+}
+
+p {
+  transform: rotate(-5deg);
+  margin-top: 3em;
+  max-width: 19em;
+}
+
+@media only screen and (min-width: 60em) {
+
+  h1 {
+    top: 1em;
+    left: .7em;
+  }
+
+  section {
+    max-height: 490px;
+  }
+
+  p {
+    margin-top: 3.5em;
+  }
+
+}
+
+@keyframes fly-in-cherry {
+
+  from {
+    top: -15em;
+  }
+
+  to {
+    top: -1.75em;
+  }
+
+}
+
+@keyframes fly-in-v-fudge {
+
+  from {
+    top: -30.3em;
+  }
+
+  to {
+    top: -7.05em;
+  }
+
+}
+
+@keyframes fly-in-ch-chip {
+
+  from {
+    top: -25.75em;
+  }
+
+  to {
+    top: -12.5em;
+  }
+
+}
+
+@keyframes fly-in-mt-chip {
+
+  from {
+    top: -42em;
+  }
+
+  to {
+    top: -17.5em;
+  }
+
+}
+
+@keyframes fly-in-cone {
+
+  from {
+    top: -50em;
+  }
+
+  to {
+    top: -21.5em;
+  }
+
+}
+
+@keyframes show {
 
   0% {
-    bottom: 100%;
+    filter: opacity(0) blur(5px);
+  }
+
+  50% {
+    filter: blur(10px);
   }
 
   100% {
-    bottom: 70%;
-  }
-
-}
-
-@media only screen and (min-width: 90em) {
-
-  .left-content {
-    padding-left: 10.5em;
-    padding-top: 1em;
-  }
-
-  .ice-cream {
-    padding-right: 21em;
+    filter: opacity(100) blur(0);
   }
 
 }
